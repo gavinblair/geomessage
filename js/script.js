@@ -34,7 +34,7 @@ $(document).ready(function(){
 						//metres
 						dist = parseInt(dist.slice(0,strLen-1));
 						
-						if(dist < 2) {
+						if(dist < 10) {//within 10m
 							//we're there!
 							clearInterval(checker);
 							$("h1").text(point.message);
