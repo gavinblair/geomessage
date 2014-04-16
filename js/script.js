@@ -57,7 +57,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: 'get',
 			url: 'data.php',
-			data: 'i=true&name='+$("#name").val()+'&message='+$("#message")+'&lat='+lat+'&lng='+lng,
+			data: 'i=true&name='+$("#name").val()+'&message='+$("#message").val()+'&lat='+lat+'&lng='+lng,
 			dataType: 'text',
 			success: function(p){
 				window.location.hash = "";
