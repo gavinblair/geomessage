@@ -26,8 +26,8 @@
 		$date = date('Y-m-d H:i:s');
 		$name = mysql_real_escape_string($_GET['name']);
 		$message = mysql_real_escape_string($_GET['message']);
-		$lat = intval($_GET['lat']*100000)/100000;
-		$lng = intval($_GET['lng']*100000)/100000;
+		$lat = mysql_real_escape_string($_GET['lat']);
+		$lng = mysql_real_escape_string($_GET['lng']);
 		$sql = "INSERT INTO messages (created, name, message, lat, lng) VALUES ('$date', '$name', '$message', '$lat', '$lng')";
 		$query = mysql_query($sql);
 		return mysql_insert_id();
